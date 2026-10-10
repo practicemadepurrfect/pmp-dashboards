@@ -1,0 +1,64 @@
+{
+  "_comment": "Notional value of each conversion action, in GBP ex VAT. The pipeline stores RAW COUNTS only; values are applied when the dashboard renders. So if you change a value here, the entire history is re-rated consistently and the trend stays honest. 'success_rate' is the share of button clicks you assume go on to complete (1.0 = the value already accounts for drop-off, which is how the original Thrums setup worked). 'slot' is the fixed colour slot: a conversion type keeps its colour on every dashboard, always. An event_map entry can be a plain GA4 event name, or a rule object using GA4's own enhanced-measurement events: {\"event\":\"page_view\",\"page_path_contains\":\"/thank-you\"}, {\"event\":\"form_submit\",\"page_path_contains\":\"/register\"}, {\"event\":\"click\",\"link_url_contains\":\"vetsuccess.co.uk\"}. Rules have full history in GA4, so they survive site changes that break GTM triggers.",
+  "currency": "GBP",
+  "values_version": "2026-10 (original five plus register £50, prescription £20)",
+  "conversions": {
+    "join_health_plan": {
+      "label": "Join the health plan",
+      "short": "Health plan",
+      "value": 100,
+      "success_rate": 1.0,
+      "slot": 1
+    },
+    "book_appointment": {
+      "label": "Book an appointment",
+      "short": "Book",
+      "value": 20,
+      "success_rate": 1.0,
+      "slot": 2
+    },
+    "phone": {
+      "label": "Phone the practice",
+      "short": "Phone",
+      "value": 20,
+      "success_rate": 1.0,
+      "slot": 3
+    },
+    "email": {
+      "label": "Email the practice",
+      "short": "Email",
+      "value": 20,
+      "success_rate": 1.0,
+      "slot": 4
+    },
+    "job_application": {
+      "label": "Job application",
+      "short": "Jobs",
+      "value": 150,
+      "success_rate": 1.0,
+      "slot": 5
+    },
+    "register_pet": {
+      "label": "Register a new pet",
+      "short": "Register",
+      "value": 50,
+      "success_rate": 1.0,
+      "slot": 6
+    },
+    "repeat_prescription": {
+      "label": "Order a repeat prescription",
+      "short": "Prescription",
+      "value": 20,
+      "success_rate": 1.0,
+      "slot": 7
+    }
+  },
+  "channel_groups": [
+    "Organic Search",
+    "Direct",
+    "Paid Search",
+    "Referral",
+    "Organic Social",
+    "Other"
+  ]
+}
